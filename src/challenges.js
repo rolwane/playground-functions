@@ -74,18 +74,38 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
 }
 
+// Criei uma função auxiliar para o requisito 08 para diminuir a complexidade
+function checkDivision(num) {
+  let value = 0;
+  if (num % 3 === 0) {
+    if (num % 5 === 0) {
+      value = 8;
+    } else {
+      value = 3;
+    }
+  } else if (num % 5 === 0) {
+    value = 5;
+  }
+  return value;
+}
+
 // Desafio 8
 function fizzBuzz(array) {
   let result = [];
   for (let number of array) {
-    if (number % 3 !== 0 && number % 5 !== 0) {
+    switch (checkDivision(number)) {
+    case 0:
       result.push('bug!');
-    } else if (number % 3 === 0 && number % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (number % 3 === 0) {
+      break;
+    case 3:
       result.push('fizz');
-    } else {
+      break;
+    case 5:
       result.push('buzz');
+      break;
+    default:
+      result.push('fizzBuzz');
+      break;
     }
   }
   return result;
