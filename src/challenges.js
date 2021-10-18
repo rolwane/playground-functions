@@ -18,8 +18,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
+
+// Aqui usei TEMPLATE LITERALS. Usei esse site como referência para aprender a sintaxe: https://eslint.org/docs/rules/prefer-template
 function concatName(array) {
-  return array[array.length - 1] + ', ' + array[0];
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
@@ -27,9 +29,29 @@ function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
+// Função extra para encontrar o maio número em um Array
+function checkHighest(array) {
+  let highestNumber = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > highestNumber) {
+      highestNumber = array[i];
+    }
+  }
+  return highestNumber;
+}
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highestNumber = checkHighest(array);
+  let count = 0;
+
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === highestNumber) {
+      count += 1;
+    }
+  }
+  
+  return count;
 }
 
 // Desafio 7
