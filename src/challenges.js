@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
 
 // Função extra para encontrar o maio número em um Array
 function checkHighest(array) {
-  let highestNumber = 0;
+  let highestNumber = array[0];
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] > highestNumber) {
       highestNumber = array[i];
