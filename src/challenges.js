@@ -50,7 +50,6 @@ function highestCount(array) {
       count += 1;
     }
   }
-  
   return count;
 }
 
