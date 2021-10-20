@@ -76,8 +76,14 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  let absAB = Math.abs(a - b);
+  let absBC = Math.abs(b - c);
+  let absAC = Math.abs(a - c);
+  if (absBC && b > absAC && c > absAB) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
